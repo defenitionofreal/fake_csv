@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Data Schemas{% endblock %}
+{% block content %}
+{% include 'partials/_navbar.html' %}
+<div class="col-md-9">
+    <div class="title-pos">
+    <h2 class="left">
+        {% with url_name=request.resolver_match.url_name %}
+        {{ url_name }}
+        {% endwith %}
+    </h2>
+    <a href="{% url 'New Schema' %}" class="right">
+        <button class="btn btn-success">New schema</button>
+    </a>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col" class="main-font">#</th>
+            <th scope="col" class="main-font">Title</th>
+            <th scope="col" class="main-font">Modified</th>
+            <th scope="col" class="main-font">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        
+
+            {% for schema in schema %}
+            <tr>
+                <th scope="row" class="main-font">{{ forloop.counter }}</th>
+                <td><a href="{% url 'Data Sets' pk=schema.id %}" class="primary-link">{{ schema.name }}</a></td>
+                <td class="main-font">{{ schema.modified|date:"Y-m-d" }}</td>
+                <td>
+                    <a href="{% url 'Update Schema' pk=schema.id %}" class="primary-link">
+                        Edit scheme
+                    </a>
+                       
+                    <a href="{% url 'delete_schema' pk=schema.id %}" class="danger-link">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+
+            <!-- <tr>
+                <th scope="row" class="main-font">1</th>
+                <td><a href="#" class="primary-link">Customers</a></td>
+                <td class="main-font">2021-21-05</td>
+                <td>
+                    <a href="#" class="primary-link">
+                        Edit scheme
+                    </a>
+                       
+                    <a href="#" class="danger-link">
+                        Delete
+                    </a>
+                </td>
+            </tr> -->
+        
+        
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+{% load crispy_forms_tags %}
+{% block title %}Data Schemas{% endblock %}
+{% block content %}
+{% include 'partials/_navbar.html' %}
+<div class="col-md-9">
+    <div class="row align-items-center">
+     <div class="col-8">
+         <h2>
+            {% with url_name=request.resolver_match.url_name %}
+            {{ url_name }}
+            {% endwith %}
+         </h2>
+     </div>
+     <div class="col-4">
+        <form class="" method="post" > 
+            {% csrf_token %}
+            <div class="row align-items-center csv-form">
+                <label class="col-3 col-form-label">Rows:</label>
+                <div class="col-3">
+                  {{ form|crispy }}
+                </div>
+                <button type="submit" class="btn btn-success col-6">Generate data</button> 
+            </div>
+        </form>
+     </div>
+    </div>
+
+    {% if not object_list %}
+    <p>No datasets</p>
+    {% else %}
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col" class="main-font">#</th>
+            <th scope="col" class="main-font">Created</th>
+            <th scope="col" class="main-font">Status</th>
+            <th scope="col" class="main-font">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for dataset in object_list %}
+            <tr>
+                <th scope="row" class="main-font">{{ forloop.counter }}</th>
+                <td class="main-font">{{ dataset.created|date:"Y-m-d" }}</td>
+                <td>
+                    {% if dataset.status == 'Ready' %}
+                    <span class="status-ready">Ready</span>
+                    {% else %}
+                    <span class="status-process">Processing</span>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if dataset.status == 'Ready' %}
+                    <a href="../media/schema_{{dataset.schema_id}}dataset_{{dataset.id}}.csv" class="primary-link">
+                        Download
+                    </a>
+                    {% else %}
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</div>
+{% endblock %}

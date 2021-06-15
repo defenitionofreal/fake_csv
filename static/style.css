@@ -1,0 +1,340 @@
+@font-face {
+    font-family: 'HelveticaNeueCyr';
+    src: url('fonts/HelveticaNeueCyr-Light.eot');
+    src: local('fonts/HelveticaNeueCyr-Light'),
+        url('fonts/HelveticaNeueCyr-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/HelveticaNeueCyr-Light.woff2') format('woff2'),
+        url('fonts/HelveticaNeueCyr-Light.woff') format('woff'),
+        url('fonts/HelveticaNeueCyr-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyr';
+    src: url('fonts/HelveticaNeueCyr-UltraLight.eot');
+    src: local('fonts/HelveticaNeueCyr-UltraLight'),
+        url('fonts/HelveticaNeueCyr-UltraLight.eot?#iefix') format('embedded-opentype'),
+        url('fonts/HelveticaNeueCyr-UltraLight.woff2') format('woff2'),
+        url('fonts/HelveticaNeueCyr-UltraLight.woff') format('woff'),
+        url('fonts/HelveticaNeueCyr-UltraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyr';
+    src: url('fonts/HelveticaNeueCyr-Thin.eot');
+    src: local('fonts/HelveticaNeueCyr-Thin'),
+        url('fonts/HelveticaNeueCyr-Thin.eot?#iefix') format('embedded-opentype'),
+        url('fonts/HelveticaNeueCyr-Thin.woff2') format('woff2'),
+        url('fonts/HelveticaNeueCyr-Thin.woff') format('woff'),
+        url('fonts/HelveticaNeueCyr-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyr';
+    src: url('fonts/HelveticaNeueCyr-Roman.eot');
+    src: local('HelveticaNeueCyr-Roman'),
+        url('fonts/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),
+        url('fonts/HelveticaNeueCyr-Roman.woff2') format('woff2'),
+        url('fonts/HelveticaNeueCyr-Roman.woff') format('woff'),
+        url('fonts/HelveticaNeueCyr-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyr';
+    src: url('fonts/HelveticaNeueCyr-Black.eot');
+    src: local('fonts/HelveticaNeueCyr-Black'),
+        url('fonts/HelveticaNeueCyr-Black.eot?#iefix') format('embedded-opentype'),
+        url('fonts/HelveticaNeueCyr-Black.woff2') format('woff2'),
+        url('fonts/HelveticaNeueCyr-Black.woff') format('woff'),
+        url('fonts/HelveticaNeueCyr-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyr';
+    src: url('fonts/HelveticaNeueCyr-Heavy.eot');
+    src: local('fonts/HelveticaNeueCyr-Heavy'),
+        url('fonts/HelveticaNeueCyr-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('fonts/HelveticaNeueCyr-Heavy.woff2') format('woff2'),
+        url('fonts/HelveticaNeueCyr-Heavy.woff') format('woff'),
+        url('fonts/HelveticaNeueCyr-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyr';
+    src: url('fonts/HelveticaNeueCyr-Medium.eot');
+    src: local('fonts/HelveticaNeueCyr-Medium'),
+        url('fonts/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/HelveticaNeueCyr-Medium.woff2') format('woff2'),
+        url('fonts/HelveticaNeueCyr-Medium.woff') format('woff'),
+        url('fonts/HelveticaNeueCyr-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('HelveticaNeueBoldCondensed.eot');
+    src: local('Helvetica Neue Condensed Bold'), local('fonts/HelveticaNeueBoldCondensed'),
+        url('fonts/HelveticaNeueBoldCondensed.eot?#iefix') format('embedded-opentype'),
+        url('fonts/HelveticaNeueBoldCondensed.woff2') format('woff2'),
+        url('fonts/HelveticaNeueBoldCondensed.woff') format('woff'),
+        url('fonts/HelveticaNeueBoldCondensed.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('fonts/HelveticaNeueBlackCondensed.eot');
+    src: local('fonts/Helvetica Neue Condensed Black'), local('fonts/HelveticaNeueBlackCondensed'),
+        url('fonts/HelveticaNeueBlackCondensed.eot?#iefix') format('embedded-opentype'),
+        url('fonts/HelveticaNeueBlackCondensed.woff2') format('woff2'),
+        url('fonts/HelveticaNeueBlackCondensed.woff') format('woff'),
+        url('fonts/HelveticaNeueBlackCondensed.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyr';
+    src: url('fonts/HelveticaNeueCyr-Bold.eot');
+    src: local('fonts/HelveticaNeueCyr-Bold'),
+        url('fonts/HelveticaNeueCyr-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/HelveticaNeueCyr-Bold.woff2') format('woff2'),
+        url('fonts/HelveticaNeueCyr-Bold.woff') format('woff'),
+        url('fonts/HelveticaNeueCyr-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+input[type="text"]::-webkit-input-placeholder { /* Chrome */
+    color: #999999;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  input[type="text"]:-ms-input-placeholder { /* IE 10+ */
+    color: #999999;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  input[type="text"]::-moz-placeholder { /* Firefox 19+ */
+    color: #999999;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  input[type="text"]:-moz-placeholder { /* Firefox 4 - 18 */
+    color: #999999;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  input[type="password"]::-webkit-input-placeholder { /* Chrome */
+    color: #999999;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  input[type="password"]:-ms-input-placeholder { /* IE 10+ */
+    color: #999999;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  input[type="password"]::-moz-placeholder { /* Firefox 19+ */
+    color: #999999;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  input[type="password"]:-moz-placeholder { /* Firefox 4 - 18 */
+    color: #999999;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+
+
+body{
+    font-family: 'HelveticaNeueCyr';
+    box-sizing: border-box;
+}
+
+/* nav bar */
+.bg-light{
+    background: #F7F7F9;
+    border-radius: 4px;
+    height: 54px;
+}
+.navbar-light .navbar-brand {
+    color: rgba(0,0,0,.8);
+    font-size: 20px;
+    line-height: 17px;
+    font-family: 'HelveticaNeue';
+}
+.nav-link{
+    font-family: 'HelveticaNeue';
+font-size: 16px;
+line-height: 16px;
+}
+.light-t{
+font-family: 'HelveticaNeue';
+font-size: 16px;
+line-height: 16px;
+color: rgba(0, 0, 0, 0.3) !important;
+}
+
+
+/*login form*/
+.form{
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    width: 650px;
+    height: 445;
+    margin: 180px auto;
+}
+.form div {
+    line-height: 10px;
+    width: 308px;
+    height: 38px;
+    margin: 0 auto;
+}
+.form-control{
+    margin-top: 23px;
+}
+
+.form-title{
+    text-align: center;
+    display: block;
+    width: 86px;
+    font-size: 40px;
+    margin: 38px auto;
+    height: 79px;
+    font-weight: 300;
+    color: #373A3C;
+}
+
+.form button{
+    width: 85px;
+    height: 38px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+/* some page content */
+.title-pos{
+    margin-top: 28px;
+    margin-bottom: 31px;
+}
+h2 {
+font-family: 'HelveticaNeue';
+font-size: 24px;
+line-height: 26px;
+color: #373A3C;
+}
+.btn-success{
+    background-color:#5CB85C;
+    border-color:#5CB85C;
+}
+
+.primary-link{
+font-family: 'HelveticaNeue';
+font-size: 16px;
+line-height: 24px;
+color: #0275D8;
+outline: none;
+text-decoration: none;
+}
+.danger-link{
+    color: #D9534F;
+    font-family: 'HelveticaNeue';
+font-size: 16px;
+line-height: 24px;
+outline: none;
+text-decoration: none;
+}
+
+.main-font{
+    font-family: 'HelveticaNeue';
+    font-size: 16px;
+    line-height: 24px;
+    color: #373A3C;
+}
+
+/* table */
+.table .table-bordered{
+    border: 1px solid #ECEEEF;
+}
+tbody, td, tfoot, th, thead, tr{
+    height: 50px;
+    width: 290px;
+}
+
+th:first-child{
+    height: 50px;
+    width: 115px;
+}
+
+
+.status-ready{
+    padding: 4px 5px;
+    background: #5CB85C;
+    color: #fff;
+    border-radius: 4px;
+    font-family: 'HelveticaNeue';
+    line-height: 24px;
+}
+.status-process{
+    padding: 4px 5px;
+    background:#999999;
+    color: #fff;
+    border-radius: 4px;
+    font-family: 'HelveticaNeue';
+    line-height: 24px;
+}
+
+.left, .right {
+    display: inline-block;
+    width: 100%;
+    margin-right: -100%;
+    vertical-align: bottom;
+}
+.right {
+    text-align: right;
+}
+.left a, .right a { display: inline-block; position: relative; }
+
+select.form-select{
+    margin-top: 23px !important;
+}
+
+.csv-form label{
+    margin-top: 20px;
+    text-align: right;
+    max-width: 51px;
+    font-family: "HelveticaNeue";
+font-size: 16px;
+line-height: 24px;
+}
+
+.csv-form input{
+    max-width: 84px;
+    height: 38px;
+    margin-top: 40px;
+}
+
+.csv-form button {
+    font-family: "HelveticaNeue";
+font-size: 16px;
+    height: 39px;
+    margin-top: 22px;
+}
+
+.form-label {
+    margin-bottom: -1rem;
+}
