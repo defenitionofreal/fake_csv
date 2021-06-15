@@ -97,13 +97,22 @@ WSGI_APPLICATION = 'csv_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd3m81lmnpj695s',
+        'HOST': 'ec2-54-155-92-75.eu-west-1.compute.amazonaws.com',
+        'POST': 5432,
+        'USER': 'ywnmldiygabhcz',
+        'PASSWORD': '49e0d747aa3b5beb3009751486bada0673691463d00b582ec3eafb2866b67e32',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
