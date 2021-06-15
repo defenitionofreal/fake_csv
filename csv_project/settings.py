@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^-=a&k^q4^x_05kiv1nuj)nmmc9pl4df62s05o@3w(w1y-%38u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['fakecsvgen.herokuapp.com', '127.0.0.1']
 
 # Celery Configuration Options
 CELERY_TIMEZONE = "Europe/Moscow"
