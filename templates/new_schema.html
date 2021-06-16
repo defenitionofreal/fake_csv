@@ -44,6 +44,7 @@
                             {% endfor %}
                             {% for form in form.visible_fields %}
                                 <div class="col-sm-2">
+                                    {{ form.errors.as_ul }}
                                     {{ form|as_crispy_field }}
                                 </div>
                             {% endfor %}
@@ -78,7 +79,7 @@ const range_appear = (column_type) => {
   
 
     $('.formset_row-{{ fields.prefix }}').formset({
-        prefix: '{{ fields.prefix }}',
+        prefix: '{{ columns.prefix }}',
         addCssClass: 'btn btn-primary',
         deleteCssClass: 'danger-link col-sm-2'
     });
