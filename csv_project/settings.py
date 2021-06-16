@@ -26,18 +26,28 @@ SECRET_KEY = 'django-insecure-^-=a&k^q4^x_05kiv1nuj)nmmc9pl4df62s05o@3w(w1y-%38u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['fakecsvgen.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['fakecsvgen.herokuapp.com', '127.0.0.1', 'localhost']
 
 # Celery Configuration Options
 CELERY_TIMEZONE = "Europe/Moscow"
 CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60
 #CELERY_BROKER_URL = 'redis://localhost:6379/0'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+#CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
 
-CELERY_BROKER_URL = 'redis://:p59c7ea534c4a1790f30dd9c816421fa8bd68ed883090a745e706037781520828@ec2-54-76-185-199.eu-west-1.compute.amazonaws.com:32310'
+# CELERY_BROKER_URL = os.environ['REDIS_URL']
+# CELERY_RESULT_BACKEND = os.environ['REDIS_URL']
+
+# CELERY_BROKER_URL = 'redis://:p59c7ea534c4a1790f30dd9c816421fa8bd68ed883090a745e706037781520828@ec2-54-76-185-199.eu-west-1.compute.amazonaws.com:32310'
+# CELERY_RESULT_BACKEND = 'redis://:p59c7ea534c4a1790f30dd9c816421fa8bd68ed883090a745e706037781520828@ec2-54-76-185-199.eu-west-1.compute.amazonaws.com:32310'
 
 #CELERY_RESULT_BACKEND = 'django-db'
+
+BROKER_URL = os.environ.get("REDISCLOUD_URL", "django://")
+BROKER_TRANSPORT_OPTIONS = {
+    "max_connections": 2,
+}
+BROKER_POOL_LIMIT = None
 
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
@@ -97,12 +107,6 @@ WSGI_APPLICATION = 'csv_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
