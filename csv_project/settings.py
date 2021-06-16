@@ -15,24 +15,19 @@ ALLOWED_HOSTS = ['fakecsvgen.herokuapp.com', '127.0.0.1', 'localhost']
 CELERY_TIMEZONE = "Europe/Moscow"
 CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60
-
-#CELERY_BROKER_URL = 'redis://localhost:6379/0'
-#CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
-
-# CELERY_BROKER_URL = os.environ['REDIS_URL']
-# CELERY_RESULT_BACKEND = os.environ['REDIS_URL']
-
-CELERY_BROKER_URL = 'redis://:p59c7ea534c4a1790f30dd9c816421fa8bd68ed883090a745e706037781520828@ec2-54-76-185-199.eu-west-1.compute.amazonaws.com:32310'
-CELERY_RESULT_BACKEND = 'redis://:p59c7ea534c4a1790f30dd9c816421fa8bd68ed883090a745e706037781520828@ec2-54-76-185-199.eu-west-1.compute.amazonaws.com:32310'
-
-#CELERY_RESULT_BACKEND = 'django-db'
-
-# CELERY_BROKER_URL = os.environ.get("REDISCLOUD_URL", "django://")
-
-
+CELERY_RESULT_BACKEND = 'django-db'  # shows ready status
+CELERY_BROKER_URL = os.environ.get("REDISCLOUD_URL", "redis://") # work
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
+
+#CELERY_BROKER_URL = 'redis://localhost:6379/0'  # for local
+#CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+# CELERY_BROKER_URL = os.environ['REDIS_URL']   # didnt work. why?
+# CELERY_RESULT_BACKEND = os.environ['REDIS_URL'] # didnt work. why?
+# CELERY_BROKER_URL = 'redis://:p59c7ea534c4a1790f30dd9c816421fa8bd68ed883090a745e706037781520828@ec2-54-76-185-199.eu-west-1.compute.amazonaws.com:32310'   # didnt work. why?
+# CELERY_RESULT_BACKEND = 'redis://:p59c7ea534c4a1790f30dd9c816421fa8bd68ed883090a745e706037781520828@ec2-54-76-185-199.eu-west-1.compute.amazonaws.com:32310'   # didnt work. why?
+#CELERY_RESULT_BACKEND = os.environ.get("REDISCLOUD_URL", "redis://") # dont show status ready
 
 # Application definition
 
