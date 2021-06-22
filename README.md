@@ -1,5 +1,4 @@
-# planeks_csv
-Test task from planeks. #django #python #celery #redis
+Generate csv file with fake data.
 
 https://fakecsvgen.herokuapp.com/login/
 
